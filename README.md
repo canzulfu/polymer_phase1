@@ -1,14 +1,16 @@
-Polymer
-Gmolymer, Dev testneti mevcut ama bizde IBC Channel oluşturup katılalım bir nebze.
+# Polymer
 
-Şahsen benim için öenmli bir proje - siz katılmak isterseniz diye paylaşıyorum.
+> Gmolymer, Dev testneti mevcut ama bizde IBC Channel oluşturup katılalım bir nebze.
 
-Günün sonunda rolümüzü alıyoruz. Donanım olarak herhangi bir sunucu yeterli.
+> Şahsen [benim](https://x.com/Ruesandora0/status/1732454399543234688?s=20) için öenmli bir proje - siz katılmak isterseniz diye paylaşıyorum.
 
-Sorulara hızlı cevap veremeyebilirim hala iyilesmedim ve Can Azerbaycan yolculuğum var 2 gün sonra.
+> Günün sonunda rolümüzü alıyoruz. Donanım olarak herhangi bir sunucu yeterli.
 
-Topluluk kanalları: Sohbet Kanalımız - Duyurular ve Gelişmeler - Whatsapp - Polymer Discord
+> Sorulara hızlı cevap veremeyebilirim hala iyilesmedim ve Can Azerbaycan yolculuğum var 2 gün sonra.
 
+> Topluluk kanalları: [Sohbet Kanalımız](https://t.me/RuesChat) - [Duyurular ve Gelişmeler](https://t.me/RuesAnnouncement) - [Whatsapp](https://whatsapp.com/channel/0029VaBcj7V1dAw1H2KhMk34) - [Polymer Discord](https://discord.gg/nSUdZ7tg)
+
+```console
 sudo apt update -y && sudo apt upgrade -y
 sudo apt-get install git -y
 sudo apt-get install -y ca-certificates curl gnupg
@@ -21,6 +23,9 @@ sudo nano /etc/apt/sources.list.d/nodesource.list
 
 sudo apt update -y && sudo apt upgrade -y
 sudo apt-get install -y nodejs
+```
+
+```console
 # polymer kurulum
 git clone https://github.com/sarox0987/polymerlab-ibc-app-solidity.git
 cd polymerlab-ibc-app-solidity
@@ -31,24 +36,32 @@ curl -L https://foundry.paradigm.xyz | bash
 source /root/.bashrc
 foundryup
 forge build
-Cüzdan ve API key hazırlığı
-Poylmer için bir testnet metamask account oluşturun.
+```
 
-Buradan optimism - Buradan base faucet alın.
+<h1 align="center"> Cüzdan ve API key hazırlığı </h1>
 
-Alchemy hesabı oluşturup apps kısmından Optimism Sepolia ve Base Sepolia App oluşturun.
+> Poylmer için bir testnet metamask account oluşturun.
 
-Ekran Resmi 2024-03-09 22 26 16
+> [Buradan](https://www.alchemy.com/faucets/optimism-sepolia) optimism - [Buradan](https://www.alchemy.com/faucets/base-sepolia) base faucet alın.
+
+> Alchemy hesabı [oluşturup](https://dashboard.alchemy.com/apps) apps kısmından Optimism Sepolia ve Base Sepolia App oluşturun.
+
+<img width="1222" alt="Ekran Resmi 2024-03-09 22 26 16" src="https://github.com/ruesandora/Polymer/assets/101149671/b0c470c3-89f8-400f-81ec-e143b40d7349">
+
+```console
 # içersine girelim
 nano .env
-PRIVATE_KEY_1 = Metamask private keyi
+```
 
-OP_ALCHEMY_API_KEY = Optimism API Key'i (RPC değil)
+> `PRIVATE_KEY_1` = Metamask private keyi
 
-BASE_ALCHEMY_API_KEY = Base apı Key'i (RPC değil)
+> `OP_ALCHEMY_API_KEY` = Optimism API Key'i (RPC değil)
 
-Tırnakların içersine olacak, CTRL X Y enter ile kaydedip çıkıyoruzç
+> `BASE_ALCHEMY_API_KEY` = Base apı Key'i (RPC değil)
 
+> Tırnakların içersine olacak, CTRL X Y enter ile kaydedip çıkıyoruzç
+
+```console
 # chanel oluşturma aşaması
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
@@ -57,17 +70,21 @@ nvm use 18
 npm install
 just install
 just do-it
-just yüklenmiyorsa
+```
+> just yüklenmiyorsa 
 
+```
 wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
 echo "deb [arch=all,$(dpkg --print-architecture) signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
 sudo apt update
 
 sudo apt install just
-Akabinde aşağıdaki gibi loglar alacaksınız ve done diyecek.
+``` 
 
-image
+> Akabinde aşağıdaki gibi loglar alacaksınız ve done diyecek.
 
-Hata verirse, npx hardhat clean ve just do-it tekrar çalıştır.
+![image](https://github.com/ruesandora/Polymer/assets/101149671/4346fe3f-425c-4fe8-bdd8-7aeab5ae7eb8)
 
-Ekran görüntünü #proof kanalına discordda at ve devs rolünüzü alın.
+> Hata verirse, `npx hardhat clean` ve `just do-it` tekrar çalıştır.
+
+> Ekran görüntünü #proof kanalına discordda at ve devs rolünüzü alın.
