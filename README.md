@@ -1,5 +1,6 @@
-Polymer
-Gmolymer, Dev testneti mevcut ama bizde IBC Channel oluşturup katılalım bir nebze.
+Polymer Gmolymer,
+
+ Dev testneti mevcut ama bizde IBC Channel oluşturup katılalım bir nebze.
 
 Şahsen benim için öenmli bir proje - siz katılmak isterseniz diye paylaşıyorum.
 
